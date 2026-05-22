@@ -1,0 +1,46 @@
+{
+  "name": "craftmcp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MCP server for Minecraft mod debugging - launch, download, and run Minecraft through LLM tools via stdio",
+  "bin": {
+    "craftmcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js"
+  },
+  "files": [
+    "dist/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "minecraft",
+    "mcp",
+    "modelcontextprotocol",
+    "launcher",
+    "mod",
+    "debug",
+    "fabric",
+    "forge"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anomalyco/minecraft-mcp.git"
+  },
+  "license": "MPL-2.0",
+  "dependencies": {
+    "@xmcl/core": "^2.15.1",
+    "@xmcl/installer": "^6.1.2",
+    "@modelcontextprotocol/sdk": "^1.9.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0"
+  }
+}
